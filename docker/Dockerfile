@@ -16,7 +16,7 @@ RUN yum -y  install wget git && \
     echo "export PATH=$PATH:/usr/local/bin/mongodb-linux-x86_64-${MONGO_VERSION}/bin" >> /etc/profile && \
     sed -i "s#app.secret.*#app.secret=${APP_SECRET}#g" /usr/local/bin/leanote/conf/app.conf && \
     rm leanote-linux-amd64-v${LEANOTE_VERSION}.bin.tar.gz && \
-    rm mongodb-linux-x86_64-${MONGO_VERSION}.tgz && \
+    rm mongodb-linux-x86_64-${MONGO_VERSION}.tgz
 
 EXPOSE 9000
 
