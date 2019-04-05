@@ -8,7 +8,7 @@ WORKDIR /usr/local/bin/
 
 COPY start.sh  .
 
-RUN yum -y  install wget git && \
+RUN yum -y  install vim  ifconfig  curl wget  net-tools netstat git && \
     wget http://sourceforge.net/projects/leanote-bin/files/${LEANOTE_VERSION}/leanote-linux-amd64-v${LEANOTE_VERSION}.bin.tar.gz/download -O leanote-linux-amd64-v${LEANOTE_VERSION}.bin.tar.gz && \
     wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-${MONGO_VERSION}.tgz && \
     tar xf leanote-linux-amd64-v${LEANOTE_VERSION}.bin.tar.gz && \
